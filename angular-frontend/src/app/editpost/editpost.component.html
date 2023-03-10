@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2>Editar post</h2>
+    <form *ngIf="postForm"[formGroup]="postForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="title" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="title" formControlName="title">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Descripción</label>
+            <textarea class="form-control" id="description" formControlName="description" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input type="text" class="form-control" id="author_id" formControlName="author_id">
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-success">Actualizar post</button>
+        </div>
+    </form>
+
+</div>
